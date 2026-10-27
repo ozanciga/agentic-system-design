@@ -1,0 +1,802 @@
+[
+  {
+    "source_number": 1,
+    "source_topic": "What is an agentic AI system?",
+    "lesson_slug": "choose-the-smallest-system"
+  },
+  {
+    "source_number": 2,
+    "source_topic": "How is an AI agent different from a traditional LLM application?",
+    "lesson_slug": "choose-the-smallest-system"
+  },
+  {
+    "source_number": 3,
+    "source_topic": "When should you NOT use an AI agent?",
+    "lesson_slug": "choose-the-smallest-system"
+  },
+  {
+    "source_number": 4,
+    "source_topic": "What is the difference between an agent and an agentic workflow?",
+    "lesson_slug": "choose-the-smallest-system"
+  },
+  {
+    "source_number": 5,
+    "source_topic": "How do you decide the appropriate level of agent autonomy?",
+    "lesson_slug": "set-risk-and-autonomy"
+  },
+  {
+    "source_number": 6,
+    "source_topic": "What are the primary success metrics for an agentic system?",
+    "lesson_slug": "measure-real-outcomes"
+  },
+  {
+    "source_number": 7,
+    "source_topic": "What requirements should you clarify before designing an agent?",
+    "lesson_slug": "define-the-task-contract"
+  },
+  {
+    "source_number": 8,
+    "source_topic": "What is the most important architectural principle in agentic system design?",
+    "lesson_slug": "separate-proposals-from-authority"
+  },
+  {
+    "source_number": 9,
+    "source_topic": "What are common reasons agentic systems fail in production?",
+    "lesson_slug": "map-the-system"
+  },
+  {
+    "source_number": 10,
+    "source_topic": "What does a reference architecture for a production agent system look like?",
+    "lesson_slug": "map-the-system"
+  },
+  {
+    "source_number": 11,
+    "source_topic": "What are the main components of an agent runtime?",
+    "lesson_slug": "map-the-system"
+  },
+  {
+    "source_number": 12,
+    "source_topic": "How does the agent execution loop work?",
+    "lesson_slug": "run-a-bounded-loop"
+  },
+  {
+    "source_number": 13,
+    "source_topic": "Why should an agent have a state machine?",
+    "lesson_slug": "persist-task-lifecycle"
+  },
+  {
+    "source_number": 14,
+    "source_topic": "What is the difference between the control plane and data plane?",
+    "lesson_slug": "share-platform-contracts"
+  },
+  {
+    "source_number": 15,
+    "source_topic": "Should an agent orchestrator be stateful or stateless?",
+    "lesson_slug": "separate-state-and-memory"
+  },
+  {
+    "source_number": 16,
+    "source_topic": "When should you use synchronous versus asynchronous execution?",
+    "lesson_slug": "persist-task-lifecycle"
+  },
+  {
+    "source_number": 17,
+    "source_topic": "How should model routing work?",
+    "lesson_slug": "route-models-by-evidence"
+  },
+  {
+    "source_number": 18,
+    "source_topic": "Which parts of an agentic system should remain deterministic?",
+    "lesson_slug": "separate-proposals-from-authority"
+  },
+  {
+    "source_number": 19,
+    "source_topic": "Managed agent platform or custom runtime: how do you choose?",
+    "lesson_slug": "choose-build-versus-buy"
+  },
+  {
+    "source_number": 20,
+    "source_topic": "What should an agent architecture review check?",
+    "lesson_slug": "review-and-evolve-the-architecture"
+  },
+  {
+    "source_number": 21,
+    "source_topic": "What is the routing pattern?",
+    "lesson_slug": "route-or-chain"
+  },
+  {
+    "source_number": 22,
+    "source_topic": "What is prompt chaining?",
+    "lesson_slug": "route-or-chain"
+  },
+  {
+    "source_number": 23,
+    "source_topic": "When is it worth running agents in parallel?",
+    "lesson_slug": "parallelize-by-dependency"
+  },
+  {
+    "source_number": 24,
+    "source_topic": "How does the orchestrator–worker pattern work?",
+    "lesson_slug": "supervise-bounded-specialists"
+  },
+  {
+    "source_number": 25,
+    "source_topic": "What is the evaluator-optimizer pattern?",
+    "lesson_slug": "refine-with-a-bounded-evaluator"
+  },
+  {
+    "source_number": 26,
+    "source_topic": "What is plan-and-execute architecture?",
+    "lesson_slug": "plan-and-replan"
+  },
+  {
+    "source_number": 27,
+    "source_topic": "What is dynamic replanning, and when is it useful?",
+    "lesson_slug": "plan-and-replan"
+  },
+  {
+    "source_number": 28,
+    "source_topic": "How do you prevent infinite reasoning or tool loops?",
+    "lesson_slug": "run-a-bounded-loop"
+  },
+  {
+    "source_number": 29,
+    "source_topic": "Should an LLM decide every workflow transition?",
+    "lesson_slug": "route-or-chain"
+  },
+  {
+    "source_number": 30,
+    "source_topic": "How do you choose an orchestration pattern?",
+    "lesson_slug": "route-or-chain"
+  },
+  {
+    "source_number": 31,
+    "source_topic": "What makes a well-designed agent tool?",
+    "lesson_slug": "design-tool-contracts"
+  },
+  {
+    "source_number": 32,
+    "source_topic": "How should tool arguments be validated?",
+    "lesson_slug": "design-tool-contracts"
+  },
+  {
+    "source_number": 33,
+    "source_topic": "How should tools report errors to agents?",
+    "lesson_slug": "design-tool-contracts"
+  },
+  {
+    "source_number": 34,
+    "source_topic": "Why distinguish read tools from write tools?",
+    "lesson_slug": "control-writes-through-a-gateway"
+  },
+  {
+    "source_number": 35,
+    "source_topic": "How do you enforce least privilege for agent tools?",
+    "lesson_slug": "carry-identity-and-isolate-tenants"
+  },
+  {
+    "source_number": 36,
+    "source_topic": "How do you require approval before a risky tool call?",
+    "lesson_slug": "bind-human-approval"
+  },
+  {
+    "source_number": 37,
+    "source_topic": "Why introduce a centralized tool gateway?",
+    "lesson_slug": "control-writes-through-a-gateway"
+  },
+  {
+    "source_number": 38,
+    "source_topic": "What is the Model Context Protocol (MCP)?",
+    "lesson_slug": "review-mcp-integrations"
+  },
+  {
+    "source_number": 39,
+    "source_topic": "How do you prevent duplicate side effects from tool retries?",
+    "lesson_slug": "make-side-effects-idempotent"
+  },
+  {
+    "source_number": 40,
+    "source_topic": "How should an agent discover and choose tools?",
+    "lesson_slug": "design-tool-contracts"
+  },
+  {
+    "source_number": 41,
+    "source_topic": "What is context engineering in an agentic system?",
+    "lesson_slug": "assemble-trusted-context"
+  },
+  {
+    "source_number": 42,
+    "source_topic": "What is the role of Retrieval-Augmented Generation (RAG) in agents?",
+    "lesson_slug": "build-an-evidence-pipeline"
+  },
+  {
+    "source_number": 43,
+    "source_topic": "How should documents be chunked for retrieval?",
+    "lesson_slug": "ingest-and-chunk-documents"
+  },
+  {
+    "source_number": 44,
+    "source_topic": "Why combine keyword search, vector search, and reranking?",
+    "lesson_slug": "combine-search-and-reranking"
+  },
+  {
+    "source_number": 45,
+    "source_topic": "How do you prevent unauthorized information from entering RAG context?",
+    "lesson_slug": "enforce-access-before-context"
+  },
+  {
+    "source_number": 46,
+    "source_topic": "How do you handle stale knowledge?",
+    "lesson_slug": "reconcile-freshness-and-conflicts"
+  },
+  {
+    "source_number": 47,
+    "source_topic": "How do you ensure answers are grounded in retrieved evidence?",
+    "lesson_slug": "verify-claims-and-citations"
+  },
+  {
+    "source_number": 48,
+    "source_topic": "How do you design multi-hop retrieval?",
+    "lesson_slug": "retrieve-in-dependent-hops"
+  },
+  {
+    "source_number": 49,
+    "source_topic": "What should an agent do when retrieved sources contradict each other?",
+    "lesson_slug": "reconcile-freshness-and-conflicts"
+  },
+  {
+    "source_number": 50,
+    "source_topic": "How do you manage context-window limits?",
+    "lesson_slug": "budget-and-compress-context"
+  },
+  {
+    "source_number": 51,
+    "source_topic": "What is the difference between conversation state and workflow state?",
+    "lesson_slug": "separate-state-and-memory"
+  },
+  {
+    "source_number": 52,
+    "source_topic": "What types of memory can an agent use?",
+    "lesson_slug": "choose-memory-by-purpose"
+  },
+  {
+    "source_number": 53,
+    "source_topic": "How is a checkpoint different from long-term memory?",
+    "lesson_slug": "separate-state-and-memory"
+  },
+  {
+    "source_number": 54,
+    "source_topic": "When should information be written to long-term memory?",
+    "lesson_slug": "gate-memory-writes"
+  },
+  {
+    "source_number": 55,
+    "source_topic": "How do you prevent incorrect memories from affecting future decisions?",
+    "lesson_slug": "gate-memory-writes"
+  },
+  {
+    "source_number": 56,
+    "source_topic": "How do you implement memory deletion and privacy controls?",
+    "lesson_slug": "expire-and-delete-memory"
+  },
+  {
+    "source_number": 57,
+    "source_topic": "What is memory decay or expiration?",
+    "lesson_slug": "expire-and-delete-memory"
+  },
+  {
+    "source_number": 58,
+    "source_topic": "What metadata should a long-term memory record contain?",
+    "lesson_slug": "gate-memory-writes"
+  },
+  {
+    "source_number": 59,
+    "source_topic": "How do you handle concurrent updates to agent memory?",
+    "lesson_slug": "gate-memory-writes"
+  },
+  {
+    "source_number": 60,
+    "source_topic": "Should multiple agents share the same memory?",
+    "lesson_slug": "choose-memory-by-purpose"
+  },
+  {
+    "source_number": 61,
+    "source_topic": "When should you choose multiple agents instead of one?",
+    "lesson_slug": "justify-multiple-agents"
+  },
+  {
+    "source_number": 62,
+    "source_topic": "How does a supervisor-based multi-agent architecture work?",
+    "lesson_slug": "supervise-bounded-specialists"
+  },
+  {
+    "source_number": 63,
+    "source_topic": "What is peer-to-peer multi-agent architecture?",
+    "lesson_slug": "choose-handoffs-and-peer-messages"
+  },
+  {
+    "source_number": 64,
+    "source_topic": "What is the difference between a handoff and an agent-as-tool pattern?",
+    "lesson_slug": "choose-handoffs-and-peer-messages"
+  },
+  {
+    "source_number": 65,
+    "source_topic": "How are MCP and Agent2Agent (A2A) different?",
+    "lesson_slug": "define-agent-message-contracts"
+  },
+  {
+    "source_number": 66,
+    "source_topic": "What should an agent-to-agent message contain?",
+    "lesson_slug": "define-agent-message-contracts"
+  },
+  {
+    "source_number": 67,
+    "source_topic": "How do you prevent privilege escalation through delegation?",
+    "lesson_slug": "constrain-delegation-and-cycles"
+  },
+  {
+    "source_number": 68,
+    "source_topic": "How do you resolve conflicting outputs from multiple agents?",
+    "lesson_slug": "reconcile-freshness-and-conflicts"
+  },
+  {
+    "source_number": 69,
+    "source_topic": "Why can multi-agent systems perform worse than single-agent systems?",
+    "lesson_slug": "justify-multiple-agents"
+  },
+  {
+    "source_number": 70,
+    "source_topic": "How do you prevent deadlocks and delegation loops?",
+    "lesson_slug": "constrain-delegation-and-cycles"
+  },
+  {
+    "source_number": 71,
+    "source_topic": "What is durable execution?",
+    "lesson_slug": "checkpoint-and-replay"
+  },
+  {
+    "source_number": 72,
+    "source_topic": "What makes replaying an agent workflow difficult?",
+    "lesson_slug": "checkpoint-and-replay"
+  },
+  {
+    "source_number": 73,
+    "source_topic": "Can an agentic system guarantee exactly-once execution?",
+    "lesson_slug": "make-side-effects-idempotent"
+  },
+  {
+    "source_number": 74,
+    "source_topic": "What is the Saga pattern, and why is it useful for agents?",
+    "lesson_slug": "compensate-multi-step-actions"
+  },
+  {
+    "source_number": 75,
+    "source_topic": "How should retries be designed?",
+    "lesson_slug": "bound-retries-and-failed-work"
+  },
+  {
+    "source_number": 76,
+    "source_topic": "How do you manage timeouts across a multi-step workflow?",
+    "lesson_slug": "budget-deadlines-and-cancellation"
+  },
+  {
+    "source_number": 77,
+    "source_topic": "How should task cancellation work?",
+    "lesson_slug": "budget-deadlines-and-cancellation"
+  },
+  {
+    "source_number": 78,
+    "source_topic": "What if a tool call times out after executing successfully?",
+    "lesson_slug": "make-side-effects-idempotent"
+  },
+  {
+    "source_number": 79,
+    "source_topic": "What should happen to tasks that keep failing?",
+    "lesson_slug": "bound-retries-and-failed-work"
+  },
+  {
+    "source_number": 80,
+    "source_topic": "How do you safely resume a workflow after deploying new agent code?",
+    "lesson_slug": "pin-and-migrate-workflow-versions"
+  },
+  {
+    "source_number": 81,
+    "source_topic": "How do you threat-model an agent application?",
+    "lesson_slug": "defend-against-prompt-injection"
+  },
+  {
+    "source_number": 82,
+    "source_topic": "What is prompt injection in an agentic system?",
+    "lesson_slug": "defend-against-prompt-injection"
+  },
+  {
+    "source_number": 83,
+    "source_topic": "How do you secure tool results against malicious instructions?",
+    "lesson_slug": "defend-against-prompt-injection"
+  },
+  {
+    "source_number": 84,
+    "source_topic": "How can an agent accidentally leak sensitive information?",
+    "lesson_slug": "keep-secrets-out-and-data-in-scope"
+  },
+  {
+    "source_number": 85,
+    "source_topic": "How should agent identity and delegated authorization work?",
+    "lesson_slug": "carry-identity-and-isolate-tenants"
+  },
+  {
+    "source_number": 86,
+    "source_topic": "How should secrets be managed in agent environments?",
+    "lesson_slug": "keep-secrets-out-and-data-in-scope"
+  },
+  {
+    "source_number": 87,
+    "source_topic": "How do you safely execute code generated by an agent?",
+    "lesson_slug": "sandbox-generated-code"
+  },
+  {
+    "source_number": 88,
+    "source_topic": "How do you secure third-party MCP servers and agent integrations?",
+    "lesson_slug": "review-mcp-integrations"
+  },
+  {
+    "source_number": 89,
+    "source_topic": "What is memory poisoning?",
+    "lesson_slug": "gate-memory-writes"
+  },
+  {
+    "source_number": 90,
+    "source_topic": "How do you guarantee tenant isolation in an agent platform?",
+    "lesson_slug": "carry-identity-and-isolate-tenants"
+  },
+  {
+    "source_number": 91,
+    "source_topic": "What is the role of a policy engine in an agentic system?",
+    "lesson_slug": "separate-proposals-from-authority"
+  },
+  {
+    "source_number": 92,
+    "source_topic": "When should you use human-in-the-loop approval?",
+    "lesson_slug": "set-risk-and-autonomy"
+  },
+  {
+    "source_number": 93,
+    "source_topic": "How does risk-based autonomy work?",
+    "lesson_slug": "set-risk-and-autonomy"
+  },
+  {
+    "source_number": 94,
+    "source_topic": "How should an agent express uncertainty?",
+    "lesson_slug": "verify-completion-and-uncertainty"
+  },
+  {
+    "source_number": 95,
+    "source_topic": "How do you make proposed actions understandable to users?",
+    "lesson_slug": "bind-human-approval"
+  },
+  {
+    "source_number": 96,
+    "source_topic": "What is the difference between rollback and compensation?",
+    "lesson_slug": "compensate-multi-step-actions"
+  },
+  {
+    "source_number": 97,
+    "source_topic": "How can you detect an agent acting outside its intended objective?",
+    "lesson_slug": "separate-proposals-from-authority"
+  },
+  {
+    "source_number": 98,
+    "source_topic": "How do privacy and data residency requirements affect architecture?",
+    "lesson_slug": "keep-secrets-out-and-data-in-scope"
+  },
+  {
+    "source_number": 99,
+    "source_topic": "What should an audit trail contain?",
+    "lesson_slug": "observe-without-exposing-payloads"
+  },
+  {
+    "source_number": 100,
+    "source_topic": "How do you avoid excessive human trust in agent recommendations?",
+    "lesson_slug": "verify-completion-and-uncertainty"
+  },
+  {
+    "source_number": 101,
+    "source_topic": "How should an agentic system be evaluated?",
+    "lesson_slug": "evaluate-the-whole-trajectory"
+  },
+  {
+    "source_number": 102,
+    "source_topic": "What is a golden evaluation dataset?",
+    "lesson_slug": "build-golden-task-cases"
+  },
+  {
+    "source_number": 103,
+    "source_topic": "Which metrics matter for an autonomous agent?",
+    "lesson_slug": "evaluate-the-whole-trajectory"
+  },
+  {
+    "source_number": 104,
+    "source_topic": "What is the difference between task success and response quality?",
+    "lesson_slug": "measure-real-outcomes"
+  },
+  {
+    "source_number": 105,
+    "source_topic": "Why is trajectory evaluation important?",
+    "lesson_slug": "evaluate-the-whole-trajectory"
+  },
+  {
+    "source_number": 106,
+    "source_topic": "How reliable is LLM-as-a-judge?",
+    "lesson_slug": "calibrate-model-judges"
+  },
+  {
+    "source_number": 107,
+    "source_topic": "How do you measure resistance to prompt injection?",
+    "lesson_slug": "test-adversarial-boundaries"
+  },
+  {
+    "source_number": 108,
+    "source_topic": "How do you test agent reliability under failures?",
+    "lesson_slug": "inject-failures-and-check-invariants"
+  },
+  {
+    "source_number": 109,
+    "source_topic": "How do you run an online experiment comparing two agent architectures?",
+    "lesson_slug": "compare-designs-with-controlled-experiments"
+  },
+  {
+    "source_number": 110,
+    "source_topic": "What should block a new agent release?",
+    "lesson_slug": "gate-releases-and-canaries"
+  },
+  {
+    "source_number": 111,
+    "source_topic": "How do you calculate end-to-end agent latency?",
+    "lesson_slug": "measure-critical-path-latency"
+  },
+  {
+    "source_number": 112,
+    "source_topic": "How do you reduce latency in a multi-step agent?",
+    "lesson_slug": "measure-critical-path-latency"
+  },
+  {
+    "source_number": 113,
+    "source_topic": "Why can parallel execution hurt tail latency?",
+    "lesson_slug": "measure-critical-path-latency"
+  },
+  {
+    "source_number": 114,
+    "source_topic": "How should an agent provide progress during long tasks?",
+    "lesson_slug": "persist-task-lifecycle"
+  },
+  {
+    "source_number": 115,
+    "source_topic": "What makes parallel tool calls unsafe?",
+    "lesson_slug": "parallelize-by-dependency"
+  },
+  {
+    "source_number": 116,
+    "source_topic": "How do you reduce hallucinations in agent workflows?",
+    "lesson_slug": "verify-completion-and-uncertainty"
+  },
+  {
+    "source_number": 117,
+    "source_topic": "What should happen when a model provider has an outage?",
+    "lesson_slug": "degrade-during-provider-outages"
+  },
+  {
+    "source_number": 118,
+    "source_topic": "What is graceful degradation in an agentic system?",
+    "lesson_slug": "degrade-during-provider-outages"
+  },
+  {
+    "source_number": 119,
+    "source_topic": "How should the system handle tasks beyond the agent's capability?",
+    "lesson_slug": "run-a-bounded-loop"
+  },
+  {
+    "source_number": 120,
+    "source_topic": "What is chaos testing for agentic systems?",
+    "lesson_slug": "inject-failures-and-check-invariants"
+  },
+  {
+    "source_number": 121,
+    "source_topic": "How do you estimate the cost of an agentic workflow?",
+    "lesson_slug": "budget-total-cost"
+  },
+  {
+    "source_number": 122,
+    "source_topic": "How do you reduce token consumption without hurting quality?",
+    "lesson_slug": "budget-and-compress-context"
+  },
+  {
+    "source_number": 123,
+    "source_topic": "What can be cached in an agentic system?",
+    "lesson_slug": "cache-with-permission-and-freshness"
+  },
+  {
+    "source_number": 124,
+    "source_topic": "How does tiered model routing reduce cost?",
+    "lesson_slug": "route-models-by-evidence"
+  },
+  {
+    "source_number": 125,
+    "source_topic": "How do you manage rate limits across multiple model providers?",
+    "lesson_slug": "schedule-fairly-under-limits"
+  },
+  {
+    "source_number": 126,
+    "source_topic": "How do you scale the agent runtime horizontally?",
+    "lesson_slug": "scale-workers-and-plan-capacity"
+  },
+  {
+    "source_number": 127,
+    "source_topic": "How do you prevent one tenant from consuming all agent capacity?",
+    "lesson_slug": "schedule-fairly-under-limits"
+  },
+  {
+    "source_number": 128,
+    "source_topic": "How do you plan capacity for an agent platform?",
+    "lesson_slug": "scale-workers-and-plan-capacity"
+  },
+  {
+    "source_number": 129,
+    "source_topic": "How do multi-region deployment and disaster recovery affect agent design?",
+    "lesson_slug": "fail-over-with-one-writer"
+  },
+  {
+    "source_number": 130,
+    "source_topic": "What does cost optimization look like across a whole system?",
+    "lesson_slug": "budget-total-cost"
+  },
+  {
+    "source_number": 131,
+    "source_topic": "What should distributed tracing capture in an agentic system?",
+    "lesson_slug": "connect-logs-metrics-and-traces"
+  },
+  {
+    "source_number": 132,
+    "source_topic": "What is the difference between logs, metrics, and traces for agents?",
+    "lesson_slug": "connect-logs-metrics-and-traces"
+  },
+  {
+    "source_number": 133,
+    "source_topic": "Which service-level objectives (SLOs) make sense for an agent?",
+    "lesson_slug": "set-slos-and-operating-thresholds"
+  },
+  {
+    "source_number": 134,
+    "source_topic": "How do you monitor agent quality drift?",
+    "lesson_slug": "detect-drift-and-debug-regressions"
+  },
+  {
+    "source_number": 135,
+    "source_topic": "How do you release a new agent version as a canary?",
+    "lesson_slug": "gate-releases-and-canaries"
+  },
+  {
+    "source_number": 136,
+    "source_topic": "How do you debug nondeterministic failures?",
+    "lesson_slug": "detect-drift-and-debug-regressions"
+  },
+  {
+    "source_number": 137,
+    "source_topic": "Why should prompts be versioned like code?",
+    "lesson_slug": "pin-and-migrate-workflow-versions"
+  },
+  {
+    "source_number": 138,
+    "source_topic": "How should incident response work for an autonomous agent platform?",
+    "lesson_slug": "contain-incidents-and-stop-actions"
+  },
+  {
+    "source_number": 139,
+    "source_topic": "What is an agent kill switch?",
+    "lesson_slug": "contain-incidents-and-stop-actions"
+  },
+  {
+    "source_number": 140,
+    "source_topic": "How do you maintain observability without exposing sensitive data?",
+    "lesson_slug": "observe-without-exposing-payloads"
+  },
+  {
+    "source_number": 141,
+    "source_topic": "How is a customer-support refund agent designed?",
+    "lesson_slug": "build-a-refund-workflow"
+  },
+  {
+    "source_number": 142,
+    "source_topic": "How is a research agent that produces cited reports designed?",
+    "lesson_slug": "build-a-cited-research-workflow"
+  },
+  {
+    "source_number": 143,
+    "source_topic": "How is a coding agent that opens pull requests designed?",
+    "lesson_slug": "build-a-reviewable-coding-workflow"
+  },
+  {
+    "source_number": 144,
+    "source_topic": "How is an agent that answers questions over company databases designed?",
+    "lesson_slug": "build-a-readonly-data-assistant"
+  },
+  {
+    "source_number": 145,
+    "source_topic": "How is an incident-response assistant for a large microservices platform designed?",
+    "lesson_slug": "build-an-incident-diagnosis-workflow"
+  },
+  {
+    "source_number": 146,
+    "source_topic": "How is an agent that books travel across airlines and hotels designed?",
+    "lesson_slug": "build-a-travel-saga"
+  },
+  {
+    "source_number": 147,
+    "source_topic": "How is an invoice-processing agent designed?",
+    "lesson_slug": "build-an-invoice-workflow"
+  },
+  {
+    "source_number": 148,
+    "source_topic": "How is a knowledge assistant over millions of documents designed?",
+    "lesson_slug": "ingest-and-chunk-documents"
+  },
+  {
+    "source_number": 149,
+    "source_topic": "How is a browser (computer-use) agent designed?",
+    "lesson_slug": "build-a-browser-workflow"
+  },
+  {
+    "source_number": 150,
+    "source_topic": "How is a multi-agent due-diligence system for acquisitions designed?",
+    "lesson_slug": "build-a-cited-research-workflow"
+  },
+  {
+    "source_number": 151,
+    "source_topic": "Who should own which parts of an agent architecture, across teams and over time?",
+    "lesson_slug": "share-platform-contracts"
+  },
+  {
+    "source_number": 152,
+    "source_topic": "How should an organization decide whether to adopt autonomous agents?",
+    "lesson_slug": "choose-the-smallest-system"
+  },
+  {
+    "source_number": 153,
+    "source_topic": "What should be the north-star metric for an enterprise agent platform?",
+    "lesson_slug": "measure-real-outcomes"
+  },
+  {
+    "source_number": 154,
+    "source_topic": "How do you introduce agents in phases?",
+    "lesson_slug": "set-risk-and-autonomy"
+  },
+  {
+    "source_number": 155,
+    "source_topic": "How do you decide whether to build or buy an agent platform?",
+    "lesson_slug": "choose-build-versus-buy"
+  },
+  {
+    "source_number": 156,
+    "source_topic": "How do you build a shared agent platform for several teams?",
+    "lesson_slug": "share-platform-contracts"
+  },
+  {
+    "source_number": 157,
+    "source_topic": "How do you evaluate competing agent architectures objectively?",
+    "lesson_slug": "compare-designs-with-controlled-experiments"
+  },
+  {
+    "source_number": 158,
+    "source_topic": "What should you do when task success drops after a deployment?",
+    "lesson_slug": "detect-drift-and-debug-regressions"
+  },
+  {
+    "source_number": 159,
+    "source_topic": "How do you drive adoption of agents across an organization?",
+    "lesson_slug": "share-platform-contracts"
+  },
+  {
+    "source_number": 160,
+    "source_topic": "How do you take an agent system from requirements to rollout?",
+    "lesson_slug": "define-the-task-contract"
+  }
+]

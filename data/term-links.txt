@@ -1,0 +1,105 @@
+define-the-task-contract	handoff	handoff
+measure-real-outcomes	p95	p50
+map-the-system	tool gateway	tool gateway
+run-a-bounded-loop	operation ID	operation ID
+run-a-bounded-loop	handoff	handoff
+persist-task-lifecycle	worker	worker
+design-tool-contracts	reconcile	Reconcile
+design-tool-contracts	operation ID	operation ID
+carry-identity-and-isolate-tenants	handoff	handoffs
+control-writes-through-a-gateway	operation ID	operation ID
+bind-human-approval	tenant	tenant
+sandbox-generated-code	prompt injection	prompt injection
+route-or-chain	orchestrator–worker	Orchestrator–worker
+route-or-chain	evaluator–optimizer	Evaluator–optimizer
+parallelize-by-dependency	atomic	atomically
+checkpoint-and-replay	deterministic	deterministic
+make-side-effects-idempotent	worker	worker
+make-side-effects-idempotent	atomic	atomically
+coordinate-concurrent-workers	worker	worker
+coordinate-concurrent-workers	operation ID	operation IDs
+coordinate-concurrent-workers	reconcile	reconciling
+coordinate-concurrent-workers	compare-and-swap	compare-and-swap
+bound-retries-and-failed-work	reconcile	reconcile
+compensate-multi-step-actions	reconcile	reconcile
+compensate-multi-step-actions	operation ID	operation IDs
+pin-and-migrate-workflow-versions	golden set	golden set
+ingest-and-chunk-documents	embedding	embed
+ingest-and-chunk-documents	tenant	tenant
+ingest-and-chunk-documents	hybrid search	hybrid search
+ingest-and-chunk-documents	reranker	rerank
+ingest-and-chunk-documents	recall@k	Recall@k
+ingest-and-chunk-documents	p95	p95 latency
+enforce-access-before-context	chunk	chunk
+enforce-access-before-context	tenant	tenant
+budget-and-compress-context	reranker	rerank
+budget-and-compress-context	golden set	golden set
+budget-and-compress-context	grounded	grounding
+evaluate-the-whole-trajectory	rubric	rubric
+evaluate-the-whole-trajectory	p95	p95 latency
+test-adversarial-boundaries	memory poisoning	memory poisoning
+inject-failures-and-check-invariants	worker	worker
+inject-failures-and-check-invariants	invariant	invariant
+inject-failures-and-check-invariants	lease	lease
+gate-releases-and-canaries	golden set	Golden set
+compare-designs-with-controlled-experiments	golden set	golden set
+compare-designs-with-controlled-experiments	p95	p95 latency
+compare-designs-with-controlled-experiments	shadow mode	shadow mode
+expire-and-delete-memory	embedding	embeddings
+justify-multiple-agents	golden set	golden set
+justify-multiple-agents	sandbox	sandboxed
+justify-multiple-agents	handoff	handoff
+supervise-bounded-specialists	worker	Worker
+supervise-bounded-specialists	tool gateway	tool gateway
+define-agent-message-contracts	MCP	MCP
+cache-with-permission-and-freshness	prompt caching	prompt caching
+cache-with-permission-and-freshness	embedding	embeddings
+cache-with-permission-and-freshness	tenant	tenant
+schedule-fairly-under-limits	worker	workers
+schedule-fairly-under-limits	atomic	atomically
+schedule-fairly-under-limits	tenant	Tenant
+scale-workers-and-plan-capacity	worker	Workers
+scale-workers-and-plan-capacity	sandbox	sandboxes
+scale-workers-and-plan-capacity	p95	p95
+scale-workers-and-plan-capacity	durable store	durable queue
+scale-workers-and-plan-capacity	rate limit	rate limits
+degrade-during-provider-outages	reconcile	reconcile
+fail-over-with-one-writer	fencing token	fencing
+fail-over-with-one-writer	reconcile	Reconcile
+fail-over-with-one-writer	operation ID	operation ID
+connect-logs-metrics-and-traces	operation ID	operation IDs
+set-slos-and-operating-thresholds	p95	p95
+set-slos-and-operating-thresholds	kill switch	kill switch
+detect-drift-and-debug-regressions	golden set	golden set
+contain-incidents-and-stop-actions	reconcile	reconciling
+contain-incidents-and-stop-actions	tenant	tenant
+contain-incidents-and-stop-actions	operation ID	operation ID
+contain-incidents-and-stop-actions	tool gateway	tool gateway
+build-a-refund-workflow	operation ID	operation ID
+build-a-refund-workflow	handoff	handoff
+build-a-refund-workflow	reconcile	reconcile
+build-a-refund-workflow	p95	p95
+build-a-refund-workflow	golden set	Golden cases
+build-a-cited-research-workflow	worker	worker
+build-a-reviewable-coding-workflow	sandbox	sandbox
+build-an-incident-diagnosis-workflow	p95	p95 latency
+build-an-incident-diagnosis-workflow	SLO	SLO
+build-an-incident-diagnosis-workflow	reconcile	reconcile
+build-a-travel-saga	saga	saga
+build-a-travel-saga	operation ID	operation ID
+build-a-travel-saga	reconcile	reconcile
+build-an-invoice-workflow	golden set	golden set
+choose-build-versus-buy	worker	worker
+choose-build-versus-buy	tool gateway	tool gateway
+choose-build-versus-buy	golden set	golden set
+share-platform-contracts	kill switch	kill switch
+share-platform-contracts	tool gateway	tool gateway
+share-platform-contracts	task contract	task contracts
+share-platform-contracts	golden set	Golden cases
+share-platform-contracts	policy engine	Policy engine
+review-and-evolve-the-architecture	worker	worker
+review-and-evolve-the-architecture	golden set	golden set
+review-and-evolve-the-architecture	invariant	invariants
+review-and-evolve-the-architecture	SLO	SLOs
+review-and-evolve-the-architecture	kill switch	kill switch
+review-and-evolve-the-architecture	audit trail	audit trail
