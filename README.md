@@ -52,3 +52,10 @@ The build rejects some mistakes outright: a source question that is unassigned o
 
 In prose, `*Exact lesson title*` becomes a link to that lesson. Paragraphs, `- ` bullets, `1. ` numbered lists, `**bold**`, and `` `code` `` are supported.
 
+## Private site statistics
+
+The published guide supports [GoatCounter](https://www.goatcounter.com/) for page views, estimated visits, referring sites, and approximate visitor countries. No counter appears on the site. View the reports in your GoatCounter dashboard. Keep **Settings → Dashboard viewable by** restricted to logged-in users and leave individual-pageview collection off for aggregate reports.
+
+Set the GitHub repository's **Settings → Secrets and variables → Actions → Variables → `GOATCOUNTER_ENDPOINT`** to `https://YOURCODE.goatcounter.com/count`, then run the Pages workflow again. This is a public collection address, not a password or API key. The same address can track both guides, with their paths separating sites and lessons. An empty variable leaves analytics off. For a build outside GitHub Actions, pass the same environment variable to `python3 build.py`.
+
+The tracker runs only on `ozanciga.github.io`. Local files, localhost, repository copies, and browsers sending Do Not Track or Global Privacy Control are excluded. It sends no search queries, section anchors, or form contents. Counts are estimates because blocked scripts and privacy settings can leave visits uncounted. To exclude your own visits, use GoatCounter's **Settings → Tracking → Ignore IPs**.

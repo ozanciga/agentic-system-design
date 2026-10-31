@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: '3.x'
       - name: Build guide
+        env:
+          GOATCOUNTER_ENDPOINT: ${{ vars.GOATCOUNTER_ENDPOINT }}
         run: python build.py
       - name: Stage site
         run: |

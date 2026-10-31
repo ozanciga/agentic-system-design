@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -129,6 +130,10 @@ def sidebar(prefix, current=None):
 
 def page(title, content, item=None):
     prefix = "../" if item else "./"
+    endpoint = os.environ.get("GOATCOUNTER_ENDPOINT", "").strip()
+    if endpoint and not re.fullmatch(r"https://[a-z0-9-]+\.goatcounter\.com/count", endpoint):
+        raise ValueError("GOATCOUNTER_ENDPOINT must be an HTTPS GoatCounter /count address, without credentials or query parameters.")
+    analytics = f'<meta name="goatcounter-endpoint" content="{esc(endpoint)}"><script src="{prefix}assets/analytics.js" defer></script>'
     data = f' data-guide-count="{TOTAL}"'
     breadcrumb = '<a class="top-home" href="./index.html">AGENTIC SYSTEM DESIGN</a>'
     page_count = ""
@@ -140,7 +145,7 @@ def page(title, content, item=None):
         page_count = f'<span class="page-count" aria-label="Lesson {item["number"]} of {TOTAL}">{item["number"]:02d} / {TOTAL}</span>'
         progress = f'<div class="progress" aria-hidden="true"><span style="width:{item["number"] / TOTAL * 100:.3f}%"></span></div>'
     return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171b18"><title>{esc(title)} · Agentic System Design</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script src="{prefix}assets/app.js" defer></script></head><body data-root="{prefix}"{data}><a class="skip-link" href="#main">Skip to content</a><div class="shell">{sidebar(prefix, item["slug"] if item else None)}<button class="sidebar-backdrop" aria-label="Close contents" tabindex="-1" hidden></button><main id="main"><div class="topbar"><div class="top-left"><button class="menu-button" id="menu-button" aria-label="Open contents" aria-expanded="false" aria-controls="sidebar"><span aria-hidden="true">☰</span></button>{breadcrumb}</div><div class="topbar-actions">{page_count}<a class="source-link" href="{prefix}glossary.html">Glossary</a><a class="source-link" href="{prefix}index.html#contents">Contents <span aria-hidden="true">↗</span></a></div></div>{progress}{content}{credit()}</main></div></body></html>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171b18"><title>{esc(title)} · Agentic System Design</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script src="{prefix}assets/app.js" defer></script>{analytics}</head><body data-root="{prefix}"{data}><a class="skip-link" href="#main">Skip to content</a><div class="shell">{sidebar(prefix, item["slug"] if item else None)}<button class="sidebar-backdrop" aria-label="Close contents" tabindex="-1" hidden></button><main id="main"><div class="topbar"><div class="top-left"><button class="menu-button" id="menu-button" aria-label="Open contents" aria-expanded="false" aria-controls="sidebar"><span aria-hidden="true">☰</span></button>{breadcrumb}</div><div class="topbar-actions">{page_count}<a class="source-link" href="{prefix}glossary.html">Glossary</a><a class="source-link" href="{prefix}index.html#contents">Contents <span aria-hidden="true">↗</span></a></div></div>{progress}{content}{credit()}</main></div></body></html>'''
 
 
 def caption(text, tag="figcaption", cls=""):
